@@ -49,3 +49,9 @@ addDecorator(
 if you set up `withNextRouter` in preview, it will not need to be added to the `decorators` key in each story, consider doing this if you have a lot of stories that depend on Apollo.
 
 Read more about the options available for next/router at https://nextjs.org/docs/api-reference/next/router
+
+## Example App
+
+To see real world usage of how to use this addon, check out the example app:
+
+https://github.com/lifeiscontent/realworld
