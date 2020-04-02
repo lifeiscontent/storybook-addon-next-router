@@ -5,7 +5,7 @@ Use Next.js Router in your Storybook stories.
 ## As a decorator in a story
 
 ```jsx
-import { withNextRouter } from 'storybook-addon-apollo-client';
+import { withNextRouter } from 'storybook-addon-next-router';
 import MyComponentThatHasANextLink from '../component-that-has-a-next-link';
 
 export default {
