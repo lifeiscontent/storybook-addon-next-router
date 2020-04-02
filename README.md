@@ -33,7 +33,7 @@ example.story = {
 ## Usage in `preview.js`
 
 ```js
-import { withNextRouter } from 'storybook-addon-apollo-client';
+import { withNextRouter } from 'storybook-addon-next-router';
 import { addDecorator } from '@storybook/react';
 
 addDecorator(
