@@ -12,15 +12,16 @@
     "@types/jest": "25.1.4",
     "babel-jest": "25.1.0",
     "husky": "4.2.3",
+    "next": "9.x",
     "react": "16.x",
+    "react-dom": "16.x",
     "tsdx": "0.13.0",
     "tslib": "1.11.1",
     "typescript": "3.8.3"
   },
   "dependencies": {
     "@storybook/addon-actions": "5.x",
-    "@storybook/addons": "5.x",
-    "next": "9.x"
+    "@storybook/addons": "5.x"
   },
   "engines": {
     "node": ">=10"
@@ -39,7 +40,9 @@
   "module": "dist/storybook-addon-next-router.esm.js",
   "name": "storybook-addon-next-router",
   "peerDependencies": {
-    "react": "16.x"
+    "next": "9.x",
+    "react": "16.x",
+    "react-dom": "16.x"
   },
   "prettier": {
     "printWidth": 80,
@@ -55,5 +58,5 @@
     "prepare": "tsdx build"
   },
   "typings": "dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
