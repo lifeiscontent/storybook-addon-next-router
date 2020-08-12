@@ -9,19 +9,19 @@
     "url": "https://github.com/lifeiscontent/storybook-addon-next-router.git"
   },
   "devDependencies": {
-    "@types/jest": "25.1.4",
-    "babel-jest": "25.1.0",
-    "husky": "4.2.3",
-    "next": "9.x",
+    "@types/jest": "26.0.9",
+    "babel-jest": "26.3.0",
+    "husky": "4.2.5",
+    "next": "9.5.2",
     "react": "16.x",
     "react-dom": "16.x",
-    "tsdx": "0.13.0",
-    "tslib": "1.11.1",
-    "typescript": "3.8.3"
+    "tsdx": "0.13.2",
+    "tslib": "2.0.1",
+    "typescript": "3.9.7"
   },
   "dependencies": {
-    "@storybook/addon-actions": "5.x",
-    "@storybook/addons": "5.x"
+    "@storybook/addon-actions": "6.x",
+    "@storybook/addons": "6.x"
   },
   "engines": {
     "node": ">=10"
@@ -58,5 +58,5 @@
     "prepare": "tsdx build"
   },
   "typings": "dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "2.0.0"
 }
