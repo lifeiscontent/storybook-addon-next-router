@@ -2,6 +2,11 @@
 
 Use Next.js Router in your Storybook stories.
 
+## Versions
+
+- Use 1.x if you're using storybook 5.x
+- Use 2.x if you're using storybook 6.x
+
 ## As a decorator in a story
 
 ```jsx
