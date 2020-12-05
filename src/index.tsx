@@ -13,36 +13,36 @@ export const withNextRouter = makeDecorator({
       pathname: '/',
       query: {},
       asPath: '/',
-      push(url, as, options) {
-        action('nextRouter.push')(url, as, options);
+      push(...args) {
+        action('nextRouter.push')(...args);
         return Promise.resolve(true);
       },
-      replace(url, as, options) {
-        action('nextRouter.replace')(url, as, options);
+      replace(...args) {
+        action('nextRouter.replace')(...args);
         return Promise.resolve(true);
       },
-      reload() {
-        action('nextRouter.reload')();
+      reload(...args) {
+        action('nextRouter.reload')(...args);
       },
-      back() {
-        action('nextRouter.back')();
+      back(...args) {
+        action('nextRouter.back')(...args);
       },
-      prefetch(url, asPath, options) {
-        action('nextRouter.prefetch')(url, asPath, options);
+      prefetch(...args) {
+        action('nextRouter.prefetch')(...args);
         return Promise.resolve();
       },
-      beforePopState(cb) {
-        action('nextRouter.beforePopState')(cb);
+      beforePopState(...args) {
+        action('nextRouter.beforePopState')(...args);
       },
       events: {
-        on(type, handler) {
-          action('nextRouter.events.on')(type, handler);
+        on(...args) {
+          action('nextRouter.events.on')(...args);
         },
-        off(type, handler) {
-          action('nextRouter.events.off')(type, handler);
+        off(...args) {
+          action('nextRouter.events.off')(...args);
         },
-        emit(type) {
-          action('nextRouter.events.emit')(type);
+        emit(...args) {
+          action('nextRouter.events.emit')(...args);
         },
       },
       isFallback: false,
