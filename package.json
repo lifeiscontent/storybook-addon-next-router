@@ -42,8 +42,8 @@
     "@storybook/addon-actions": "6.x",
     "@storybook/addons": "6.x",
     "next": "9.x || 10.x",
-    "react": "16.x",
-    "react-dom": "16.x"
+    "react": "16.x || 17.x",
+    "react-dom": "16.x || 17.x"
   },
   "prettier": {
     "printWidth": 80,
