@@ -1,8 +1,8 @@
 import { action } from '@storybook/addon-actions';
 import React from 'react';
 import Router, { NextRouter } from 'next/router';
-import { RouterContext } from 'next/dist/next-server/lib/router-context';
-import {useGlobals} from '@storybook/client-api';
+import { RouterContext } from 'next/dist/shared/lib/router-context';
+import { useGlobals } from '@storybook/client-api';
 
 export const withNextRouter = (story, context) => {
   const [{locale}] = useGlobals();
