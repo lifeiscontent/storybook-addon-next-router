@@ -1,25 +1,32 @@
 {
   "author": {
-    "name": "Aaron Reisman",
     "email": "aaron@lifeiscontent.net",
+    "name": "Aaron Reisman",
     "url": "https://lifeiscontent.net/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lifeiscontent/storybook-addon-next-router.git"
-  },
+  "dependencies": {},
+  "description": "Use Next.js Router in your Storybook stories.",
   "devDependencies": {
     "@babel/core": "7.14.6",
-    "@storybook/addon-actions": "6.3.2",
-    "@storybook/addons": "6.3.2",
+    "@storybook/addon-actions": "6.3.4",
+    "@storybook/addons": "6.3.4",
+    "@storybook/client-api": "^6.3.4",
     "@types/jest": "26.0.24",
+    "@typescript-eslint/eslint-plugin": "4.28.3",
+    "@typescript-eslint/parser": "4.28.3",
     "babel-jest": "27.0.6",
+    "eslint": "7.30.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-jest": "24.3.6",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
     "husky": "^7.0.0",
-    "next": "11.0.1",
+    "jest": "27.0.6",
+    "next": "11.0.2-canary.13",
+    "prettier": "2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "tsdx": "0.14.1",
-    "tslib": "2.3.0",
+    "tslib": "^2.3.0",
     "typescript": "4.3.5"
   },
   "engines": {
@@ -29,41 +36,39 @@
     "dist",
     "src"
   ],
-  "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/storybook-addon-next-router.esm.js",
-  "name": "storybook-addon-next-router",
-  "peerDependencies": {
-    "@storybook/addon-actions": "^6.0.0",
-    "@storybook/addons": "^6.0.0",
-    "next": "^9.0.0 || ^10.0.0 || ^11.0.0",
-    "react": "^16.8.0 || ^17.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0"
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build && husky install"
-  },
-  "typings": "dist/index.d.ts",
-  "version": "3.0.1",
   "keywords": [
     "storybook-addon",
     "data-state",
     "popular"
   ],
-  "description": "Use Next.js Router in your Storybook stories.",
-  "storybook": {
-    "icon": "https://camo.githubusercontent.com/92ec9eb7eeab7db4f5919e3205918918c42e6772562afb4112a2909c1aaaa875/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313630373535343338352f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6c6f676f2e706e67",
-    "displayName": "Next.js router"
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "storybook-addon-next-router",
+  "peerDependencies": {
+    "@storybook/addon-actions": "^6.0.0",
+    "@storybook/addons": "^6.0.0",
+    "@storybook/client-api": "^6.0.0",
+    "next": "^9.0.0 || ^10.0.0 || ^11.0.0",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
   },
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifeiscontent/storybook-addon-next-router.git"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "lint": "eslint .",
+    "prebuild": "yarn clean",
+    "prepare": "yarn build && husky install",
+    "start": "yarn build --watch",
+    "test": "jest"
+  },
+  "storybook": {
+    "displayName": "Next.js router",
+    "icon": "https://camo.githubusercontent.com/92ec9eb7eeab7db4f5919e3205918918c42e6772562afb4112a2909c1aaaa875/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313630373535343338352f7265706f7369746f726965732f6e6578742d6a732f6e6578742d6c6f676f2e706e67"
+  },
+  "types": "dist/index.d.ts",
+  "version": "3.0.1"
 }
