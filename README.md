@@ -23,6 +23,20 @@ module.exports = {
 };
 ```
 
+Add the RouterContext.Provider to `.storybook/preview.js`
+
+```js
+import { RouterContext } from "next/dist/shared/lib/router-context"; // next 11.2
+import { RouterContext } from "next/dist/next-server/lib/router-context"; // next < 11.2
+
+
+export const parameters = {
+  nextRouter: {
+    Provider: RouterContext.Provider,
+  },
+}
+```
+
 ## Usage in story
 
 ```jsx

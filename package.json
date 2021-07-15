@@ -33,8 +33,9 @@
     "node": ">=10"
   },
   "files": [
-    "dist",
-    "src"
+    "dist/**/*",
+    "README.md",
+    "*.js"
   ],
   "keywords": [
     "storybook-addon",
@@ -42,7 +43,7 @@
     "popular"
   ],
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "preset.js",
   "name": "storybook-addon-next-router",
   "peerDependencies": {
     "@storybook/addon-actions": "^6.0.0",
