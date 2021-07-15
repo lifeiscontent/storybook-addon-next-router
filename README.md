@@ -5,8 +5,7 @@ Use Next.js Router in your Storybook stories.
 ## Versions
 
 - Use 1.x if you're using storybook 5.x
-- Use 2.x if you're using storybook 6.x
-- Use 3.x if you're using next.js 11
+- Use 3.x if you're using storybook 6.x
 
 **Note: these docs refer to 3.0**
 
@@ -18,7 +17,7 @@ module.exports = {
   ...config,
   addons: [
     ...your addons
-    "storybook-addon-apollo-client",
+    "storybook-addon-next-router",
   ],
 };
 ```
