@@ -46,9 +46,9 @@
   "main": "preset.js",
   "name": "storybook-addon-next-router",
   "peerDependencies": {
-    "@storybook/addon-actions": "^6.0.0",
-    "@storybook/addons": "^6.0.0",
-    "@storybook/client-api": "^6.0.0",
+    "@storybook/addon-actions": "^6 || >=6.0.0-0 || >=6.1.0-0 || >=6.2.0-0 || >=6.3.0-0 || >=6.4.0-0",
+    "@storybook/addons": "^6 || >=6.0.0-0 || >=6.1.0-0 || >=6.2.0-0 || >=6.3.0-0 || >=6.4.0-0",
+    "@storybook/client-api": "^6 || >=6.0.0-0 || >=6.1.0-0 || >=6.2.0-0 || >=6.3.0-0 || >=6.4.0-0",
     "next": "^9.0.0 || ^10.0.0 || ^11.0.0",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
