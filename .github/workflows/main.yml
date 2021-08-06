@@ -13,30 +13,25 @@ jobs:
         with:
           node-version: 12.x
 
-      - name: Use cached node_modules
-        uses: actions/cache@v1
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
         with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            nodeModules-
+            ${{ runner.os }}-
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        env:
-          CI: true
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.11.5
+          run_install: true
 
       - name: Lint
-        run: yarn lint
-        env:
-          CI: true
-
-      - name: Test
-        run: yarn test --ci --coverage --maxWorkers=2
+        run: pnpm lint
         env:
           CI: true
 
       - name: Build
-        run: yarn build
+        run: pnpm build
         env:
           CI: true
