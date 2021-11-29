@@ -62,7 +62,6 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean",
     "lint": "eslint .",
-    "postversion": "git push && git push --tags",
     "prebuild": "npm run clean",
     "prepare": "husky install",
     "start": "npm run build --watch",
