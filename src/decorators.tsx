@@ -14,7 +14,6 @@ export const WithNextRouter = (
   if (Provider === undefined) throw new Error('NextContext.Provider is undefined, please add it to parameters.nextRouter.Provider');
 
   Router.router = {
-    ...parameters,
     locale: context?.globals?.locale,
     route: '/',
     pathname: '/',
@@ -53,6 +52,7 @@ export const WithNextRouter = (
       },
     },
     isFallback: false,
+    ...parameters,
   } as typeof Router.router;
 
   return (
