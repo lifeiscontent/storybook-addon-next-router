@@ -1,22 +1,21 @@
-import { action } from '@storybook/addon-actions';
-import { StoryContext } from '@storybook/addons';
-import { useGlobals } from '@storybook/client-api';
 import React from 'react';
 import Router, { NextRouter } from 'next/router';
+import { action } from '@storybook/addon-actions';
+import { StoryContext } from '@storybook/addons';
 
 
 export const WithNextRouter = (
   Story: React.FC<unknown>,
   context: StoryContext
 ): JSX.Element => {
-  const [{ locale }] = useGlobals();
 
   const { Provider, ...parameters } = context.parameters.nextRouter ?? {};
 
   if (Provider === undefined) throw new Error('NextContext.Provider is undefined, please add it to parameters.nextRouter.Provider');
 
   Router.router = {
-    locale,
+    ...parameters,
+    locale: context?.globals?.locale,
     route: '/',
     pathname: '/',
     query: {},
@@ -54,7 +53,6 @@ export const WithNextRouter = (
       },
     },
     isFallback: false,
-    ...parameters,
   } as typeof Router.router;
 
   return (
