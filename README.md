@@ -6,6 +6,7 @@ Use Next.js Router in your Storybook stories.
 
 - Use 1.x if you're using storybook 5.x
 - Use 3.x if you're using storybook 6.x
+- Use 4.x if you're using storybook 6.x and react 18
 
 **Note: these docs refer to 3.0**
 
