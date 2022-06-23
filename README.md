@@ -50,14 +50,12 @@ export default {
 // you can click the links and see the route change events there
 export const Example = () => <MyComponentThatHasANextLink />;
 
-Example.story = {
-  parameters: {
-    nextRouter: {
-      path: "/profile/[id]",
-      asPath: "/profile/lifeiscontent",
-      query: {
-        id: "lifeiscontent",
-      },
+Example.parameters = {
+  nextRouter: {
+    path: "/profile/[id]",
+    asPath: "/profile/lifeiscontent",
+    query: {
+      id: "lifeiscontent",
     },
   },
 };
