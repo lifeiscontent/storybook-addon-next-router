@@ -4,13 +4,11 @@
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jest/recommended"
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint",
-    "jest"
+    "@typescript-eslint"
   ],
   "root": true,
   "rules": {
