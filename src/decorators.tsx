@@ -1,13 +1,13 @@
 import React from 'react';
 import Router, { NextRouter } from 'next/router';
 import { action } from '@storybook/addon-actions';
-import { StoryContext } from '@storybook/addons';
+import { DecoratorFunction } from '@storybook/addons';
 
 
-export const WithNextRouter = (
-  Story: React.FC<unknown>,
-  context: StoryContext
-): JSX.Element => {
+export const WithNextRouter: DecoratorFunction<React.ReactElement> = (
+  Story,
+  context
+) => {
 
   const { Provider, ...parameters } = context.parameters.nextRouter ?? {};
 
@@ -57,7 +57,7 @@ export const WithNextRouter = (
 
   return (
     <Provider value={Router.router as NextRouter}>
-      <Story />
+      <Story {...context} />
     </Provider>
   );
 };
