@@ -54,7 +54,7 @@ export const Example = () => <MyComponentThatHasANextLink />;
 
 Example.parameters = {
   nextRouter: {
-    path: "/profile/[id]",
+    pathname: "/profile/[id]",
     asPath: "/profile/lifeiscontent",
     query: {
       id: "lifeiscontent",
@@ -70,7 +70,7 @@ in `preview.js`
 ```js
 export const parameters = {
     nextRouter: {
-        path: '/', // defaults to `/`
+        pathname: '/', // defaults to `/`
         asPath: '/', // defaults to `/`
         query: {}, // defaults to `{}`
         push() {
