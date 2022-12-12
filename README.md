@@ -26,13 +26,15 @@ module.exports = {
 Add the RouterContext.Provider to `.storybook/preview.js`
 
 ```js
-import { RouterContext } from "next/dist/shared/lib/router-context"; // next 12
+import { AppRouterContext } from "next/dist/shared/lib/app-router-context"; // next 13 next 13 (using next/navigation)
+// import { RouterContext } from "next/dist/shared/lib/router-context"; // next 13 (using next/router) / next 12
 // import { RouterContext } from "next/dist/shared/lib/router-context"; // next 11.1
 // import { RouterContext } from "next/dist/next-server/lib/router-context"; // next < 11.1
 
 export const parameters = {
   nextRouter: {
-    Provider: RouterContext.Provider,
+    Provider: AppRouterContext.Provider, // next 13 next 13 (using next/navigation)
+    // Provider: RouterContext.Provider, // next 13 (using next/router) / next < 12
   },
 }
 ```
