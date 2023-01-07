@@ -1,4 +1,8 @@
-# Storybook Addon Next Router
+# You might not need this project
+
+https://storybook.js.org/blog/integrate-nextjs-and-storybook-automatically/
+
+## Storybook Addon Next Router
 
 Use Next.js Router in your Storybook stories.
 
